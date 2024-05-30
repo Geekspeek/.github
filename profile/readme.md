@@ -2,7 +2,7 @@
 A decentralized form based communication app. Each form is a self-contained server hosted by the server owner.  Neither the server nor any of the clients will "phone home" or a central server for any reason other than to check for updates and this will be hosted via GitHub.
 # Server
 The server will be completely configurable and customizable.
-## Server Settings
+## Settings
 - Set the max audio and video bitrate
 - Set the max screen-share resolution and framerate
 - Set the max video resolution and framerate
@@ -18,7 +18,7 @@ The server will be completely configurable and customizable.
 - Allow/disallow markdown messaging support
 - Allow/disallow end-to-end data encryption
 - Set max message history or allow unlimited message history
-## Server Stack
+## Stack
 The server will be a REST API built in ASP.NET 8.0 using C#. The server will contain **NO** front-end code or styling.  The database will be [SQLite](https://www.sqlite.org/) . For client communication a mixture of websockets and polling will be utilized depending on the importance of the information.
 
 # Client
@@ -37,3 +37,5 @@ Items that will be cached include:
 - Profile Images
 - Server Icons
 - Server Themes (HTML/CSS)
+## Stack
+The client will be written using [Rust](https://www.rust-lang.org/) with the [TAURI](https://tauri.app/) framework.  [Typescript](https://www.typescriptlang.org/), [Sass](https://sass-lang.com/) and [jQuery](https://jquery.com/) for the front end. [FFMPEG](https://ffmpeg.org)will be utilized for capturing audio, video, and screens, it will also be used to compress cached media files.
